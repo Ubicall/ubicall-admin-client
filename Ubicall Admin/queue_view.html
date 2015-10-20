@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Ubicall | View Queues</title>
+
+<link rel="shortcut icon" type="img/x-icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/simpla.jquery.configuration.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/smartpaginator.js"></script>
+<script>
+$(document).ready(function () {
+$('#green').smartpaginator({ totalrecords: 10, recordsperpage: 3, datacontainer: 'mt', dataelement: 'tr', initval: 0, next: 'Next', prev: 'Prev', first: 'First', last: 'Last', theme: 'green' });
+});
+</script>
+
+</head>
+
+<body onLoad="goforit()">
+
+<!-- Left Side -->
+
+<div id="left-side">
+
+<div class="logo"><img src="img/logo.png" alt="ubicall Logo" /></div>
+
+<h4>Hello, Admin | <a href="login.html" title="Sign Out">Sign Out</a></h4>
+
+<div id="clock"></div>
+
+<!-- Main Menu -->
+
+<ul id="main-nav">
+<li><a href="index.html" class="nav-top-item no-submenu" title="Dashboard">Dashboard</a></li>
+<li><a href="trees.html" class="nav-top-item no-submenu" title="IVR Trees">IVR Trees</a></li>
+<li><a href="#" class="nav-top-item current" title="Queues">Queues</a>
+<ul>
+<li><a href="queue_add.html" title="Add Queue">Add Queue</a></li>
+<li><a href="queue_view.html" class="current" title="View Queues">View Queues</a></li>
+</ul>
+</li>
+<li><a href="#" class="nav-top-item" title="Agent">Agent</a>
+<ul>
+<li><a href="agent_add.html" title="Add Agent">Add Agent</a></li>
+<li><a href="agent_view.html" title="View Agents">View Agents</a></li>
+</ul>
+</li>
+<li><a href="profile.html" class="nav-top-item no-submenu" title="Admin Profile">Admin Profile</a></li>
+</ul>
+
+
+</div>
+
+
+<div class="clear"></div>
+
+
+<!-- Right Side -->
+
+<div id="right-side">
+
+<h2>Queues</h2>
+
+<div class="clear"></div>
+
+
+<!-- Body -->
+
+<div class="content-box">
+<div class="content-box-header">
+<h3>View Queues</h3>
+</div>
+<div class="content-box-content">
+<div class="tab-content default-tab">
+
+<div id="green-contents" class="contents">
+
+<table id="mt">
+
+<thead>
+<tr>
+<th>Queue Name</th>
+<th>Active</th>
+<th>Edit</th>
+<th>Delete</th>
+<th>Details</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Name 01</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 02</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 03</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 04</td>
+<td><a href="#" title="Not Active"><img src="img/icons/active-not.png" alt="Not Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 05</td>
+<td><a href="#" title="Not Active"><img src="img/icons/active-not.png" alt="Not Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 06</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 07</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 08</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 09</td>
+<td><a href="#" title="Not Active"><img src="img/icons/active-not.png" alt="Not Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+<tr>
+<td>Name 10</td>
+<td><a href="#" title="Active"><img src="img/icons/active.png" alt="Active" /></a></td>
+<td><a href="#" title="Edit"><img src="img/icons/edit.png" alt="Edit" /></a></td>
+<td><a href="#" title="Delete"><img src="img/icons/delete.png" alt="Delete" /></a></td>
+<td><a class="button-details" href="#">View Details</a></td>
+</tr>
+
+</tbody>
+
+</table>
+
+<div id="green" style="margin: auto;"></div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Body End -->
+
+</div>
+
+
+<div class="clear"></div>
+
+
+<!-- Footer -->
+
+<div id="footer">
+<p>&reg; Ubicall.com &copy;  All Rights Reserved</p>
+</div>
+
+</body>
+
+</html>

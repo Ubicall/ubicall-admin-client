@@ -1,0 +1,158 @@
+
+body {
+	background: #f6f6f6 url(../images/bg-login.gif) top left repeat;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: Arial, sans-serif;
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+}
+
+ol,ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+}
+
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+.clear{
+	clear:both;
+}
+
+/**************************************** Login ****************************************/
+
+#login {
+	width: 100%;
+	height:auto;
+	display:block;
+	margin: 0 auto;
+	text-align:center;
+	background: url(../images/bg-login-top.png) top left repeat-x;
+}
+
+#login .logo img {
+	width: 500px;
+	height: auto;
+	margin: 40px 0 40px 0;
+}
+
+#login-content {
+	text-align: left;
+	width: 300px;
+	margin: 40px auto;
+}
+				
+#login-content label {
+	color: #fff;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	float: left;
+	padding: 0;
+	line-height:32px;
+}
+				
+#login-content input.text-input {
+	width: 200px;
+	height:20px;
+	float: right;
+	margin: 0 0 20px 0;
+	background: #fff url(../images/bg-form-field.gif) top left repeat-x;
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+	padding: 6px;
+	font-size: 13px;
+}
+				
+#login-content p {
+	padding: 0;
+	margin:0;
+}
+				
+#login-content p#remember-password {
+	float: right;
+}
+				
+#login-content p#remember-password input {
+	float: none;
+	width: auto;
+	border: 0;
+	background: none;
+	margin: 0 10px 0 0;
+}
+
+.notification {
+	position: relative;
+	margin: 0 0 15px 0;
+	padding: 10px 10px 10px 36px;
+	border: 1px solid #000;
+	border-radius: 7px;
+	background-position: 10px 11px !important;
+	background-repeat: no-repeat !important;
+	font-size: 12px;
+	background: #000 url(../images/icons/information.png);
+	color:#fff;
+}
+				
+/**************************************** Button ****************************************/
+
+.button {
+	display: block;
+	background: #0078cc url(../images/bg-button-blue.gif) top left repeat-x !important;
+	border: 1px solid #0078cc;
+	border-radius: 4px;
+	padding: 4px 20px;
+	margin: 0;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	height:24px;
+	float:right;
+	
+}
+                
+.button:hover {
+	text-decoration: underline;
+}			

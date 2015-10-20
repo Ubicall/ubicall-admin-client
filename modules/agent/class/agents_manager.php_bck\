@@ -1,0 +1,89 @@
+<?php
+
+class agents_manager
+	{
+
+    var $conn;
+###############################################################################
+		function select_latest_agents()
+			{
+                                $result_set = mysql_query("select * from `agent`  ORDER BY id DESC LIMIT 3",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################
+###############################################################################
+		function select_agents()
+			{
+                                $result_set = mysql_query("select * from `agent`  ORDER BY id DESC",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################
+
+###############################################################################
+		function select_agents_by_id($id)
+			{
+                                $result_set = mysql_query("select * from `agent`  WHERE `id` ='".$id."' ",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################                        
+###############################################################################
+
+
+               function add_agents($number,$name,$username,$password)
+                        {
+                                $sql = "INSERT agent SET `number` ='".$number."', `name` ='".$name."', `username` ='".$username."' ,`password` ='".$password."' ";
+                                if(!mysql_query($sql, $this->conn))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+###############################################################################
+
+
+               function edit_agents($id,$number,$name,$username,$password)
+                        {
+                               
+                                $sql="UPDATE agent SET `number` ='".$number."', `name` ='".$name."', `username` ='".$username."' ,`password` ='".$password."' WHERE `id` ='".$id."' ";
+                                if(!mysql_query($sql, $this->conn))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+###############################################################################
+
+
+               function edit_agents_noimage($id,$title,$brief,$desc,$title_ar,$brief_ar,$desc_ar)
+                        {
+                                $date=date('Y-m-d');
+                                $sql="UPDATE agent SET `title` ='".$title."', `brief` ='".$brief."', `description` ='".$desc."'  ,`date` ='".$date."' ,`title_ar` ='".$title_ar."', `brief_ar` ='".$brief_ar."', `description_ar` ='".$desc_ar."' WHERE `id` ='".$id."' ";
+                                if(!mysql_query($sql, $this->conn))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+                        
+
+###############################################################################
+		function delete_agents_by_id($id)
+			{
+                                $result_set = mysql_query("DELETE from `agent`  WHERE `id` ='".$id."' ",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################   
+	}
+?>

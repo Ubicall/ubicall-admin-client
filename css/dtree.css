@@ -1,0 +1,141 @@
+.dTree {
+    font-size: 15px;
+	display:inline-block;
+}
+
+.dTree a
+{
+    height: 32px;
+    display: inline-block;
+    padding-top: 0px;
+    color:#000;
+    text-decoration: none;
+	vertical-align:top;
+}
+
+.dTree .text
+{
+    height: 18px;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+}
+
+
+.dTree li
+{
+    height: 32px;
+    display: block;
+    width: 300px;
+    line-height: 32px;
+}
+
+.dTree li.folder-group
+{
+    height: auto;
+    
+}
+
+.dTree .folder-group ul
+{
+   padding-left: 20px;
+   display: none;
+}
+
+.dTree .folder img
+{ 
+    padding-left: 20px;
+    height: 18px;
+    display: inline-block;
+    float: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.dTree .folder-open img
+{
+    padding-left: 20px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.dTree .main img
+{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+}
+
+.dTree .folder-group
+{
+    background: url('../img/misc.png') -46px -2px repeat-y;
+}
+
+.dTree .folder-group.last
+{
+   background: none;
+}
+
+.dTree .plus
+{
+    background: url('../img/misc.png') 0px -55px no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    height: 18px;
+    float: left;
+}
+
+.dTree .last .plus
+{
+    background: url('../img/misc.png') 0px -75px no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    height: 30px;
+    float: left;
+}
+
+.dTree .folder-group.last .minus
+{
+    background: url('../img/misc.png') -18px -76px no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    height: 30px;
+    float: left;
+}
+
+.dTree .minus
+{
+    background: url('../img/misc.png') -18px -55px no-repeat #fff;
+    padding-left: 20px;
+    display: inline-block;
+    height: 18px;
+    float: left;
+}
+
+.dTree .page img
+{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    float: left;
+}
+
+.dTree .join
+{
+    background: url('../img/misc.png') 0 -21px no-repeat;
+    width: 18px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+}
+
+.dTree .join-last .join
+{
+    background: url('../img/misc.png') -18px -20px no-repeat;
+    width: 18px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+}

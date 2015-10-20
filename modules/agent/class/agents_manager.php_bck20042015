@@ -1,0 +1,103 @@
+<?php
+
+class agents_manager
+	{
+
+    var $conn;
+    var $conn2;
+
+###############################################################################
+		function select_agents()
+			{
+                                $result_set = mysql_query("select * from `agent` where admin_id ='".$_SESSION['admin_user']."' ORDER BY id DESC",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################
+
+###############################################################################
+		function select_agents_by_id($id)
+			{
+                                $result_set = mysql_query("select * from `agent`  WHERE `id` ='".$id."'  ",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################                        
+###############################################################################
+
+
+               function add_agents($number,$name,$username,$password)
+                        {
+                                $sql = "INSERT agent SET `number` ='".$number."', `name` ='".$name."', `username` ='".$username."' ,`password` ='".$password."' , admin_id ='".$_SESSION['admin_user']."'";
+                                if(!mysql_query($sql, $this->conn))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+###############################################################################
+
+
+               function add_agents_callcenter($number,$name,$username,$password)
+                        {
+                                $sql = "INSERT INTO agent  SET `type`='Agent' , `number` ='".$number."', `name` ='".$name."', `password` ='".$password."' , estatus ='A'";
+                                if(!mysql_query($sql, $this->conn2))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+###############################################################################
+
+
+               function edit_agents($id,$number,$name,$username,$password)
+                        {
+                               
+                                $sql="UPDATE agent SET `number` ='".$number."', `name` ='".$name."', `username` ='".$username."' ,`password` ='".$password."' WHERE `id` ='".$id."' ";
+                                if(!mysql_query($sql, $this->conn))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+###############################################################################
+
+
+               function edit_agents_callcenter($id,$number,$name,$username,$password)
+                        {
+                               
+                                $sql="UPDATE agent  SET  `number` ='".$number."', `name` ='".$name."', `password` ='".$password."' WHERE `number` ='".$number."' ";
+                                if(!mysql_query($sql, $this->conn2))
+                                {
+                                    echo "MySQL Error:" . mysql_error(); 
+                                }
+			}
+########################################################################################
+
+###############################################################################
+		function delete_agents_by_id($id)
+			{
+                                $result_set = mysql_query("DELETE from `agent`  WHERE `id` ='".$id."' ",$this->conn) ;
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+###############################################################################   
+###############################################################################
+		function delete_agents_by_id_callcenter($number)
+			{
+                                $result_set = mysql_query("UPDATE agent SET estatus='I' WHERE number='".$number."' ",$this->conn2) ;
+				
+				$pages_array = array();
+				while($pages_array[] = mysql_fetch_array($result_set,MYSQL_ASSOC));
+				array_pop($pages_array); 
+				return $pages_array;
+			}
+############################################################################### 
+	}
+?>

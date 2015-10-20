@@ -1,0 +1,40 @@
+<?php
+//DB connection
+include 'lib/connection.php';
+//$db= new db_connector();
+
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Site Tree</title>
+
+<link href="css/dtree.css" rel="stylesheet" />
+<script src="js/jquery.min.js"></script>
+<script src="js/dtree.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".dTree").dTree();
+    });  
+</script>
+
+</head>
+
+<body>
+    
+<?php
+    if($_GET['pg']=='tree')
+        include 'modules/tree/index.php';
+    
+    
+   
+?>
+    
+</body>
+</html>
+

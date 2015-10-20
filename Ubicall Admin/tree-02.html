@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Ubicall | Edit Node</title>
+
+<link rel="shortcut icon" type="img/x-icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/simpla.jquery.configuration.js"></script>
+<script src="js/custom.js"></script>
+
+</head>
+
+<body onLoad="goforit()">
+
+<!-- Left Side -->
+
+<div id="left-side">
+
+<div class="logo"><img src="img/logo.png" alt="ubicall Logo" /></div>
+
+<h4>Hello, Admin | <a href="login.html" title="Sign Out">Sign Out</a></h4>
+
+<div id="clock"></div>
+
+<!-- Main Menu -->
+
+<ul id="main-nav">
+<li><a href="index.html" class="nav-top-item no-submenu" title="Dashboard">Dashboard</a></li>
+<li><a href="trees.html" class="nav-top-item no-submenu current" title="IVR Trees">IVR Trees</a></li>
+<li><a href="#" class="nav-top-item" title="Queues">Queues</a>
+<ul>
+<li><a href="queue_add.html" title="Add Queue">Add Queue</a></li>
+<li><a href="queue_view.html" title="View Queues">View Queues</a></li>
+</ul>
+</li>
+<li><a href="#" class="nav-top-item" title="Agent">Agent</a>
+<ul>
+<li><a href="agent_add.html" title="Add Agent">Add Agent</a></li>
+<li><a href="agent_view.html" title="View Agents">View Agents</a></li>
+</ul>
+</li>
+<li><a href="profile.html" class="nav-top-item no-submenu" title="Admin Profile">Admin Profile</a></li>
+</ul>
+
+
+</div>
+
+
+<div class="clear"></div>
+
+
+<!-- Right Side -->
+
+<div id="right-side">
+
+<h2>IVR Trees</h2>
+
+<div class="clear"></div>
+
+
+<!-- Body -->
+
+<div class="content-box">
+<div class="content-box-header">
+<h3>Edit Node</h3>
+</div>
+<div class="content-box-content">
+<div class="tab-content default-tab">
+
+<form>
+
+<fieldset>
+
+<p>
+<label>Node Name</label>
+<input class="text-input large-input" type="text" name="NodeName" />
+</p>
+
+<hr />
+
+<p>
+<label>Contact Person</label><span>Title:</span> <select class="select medium-input" name="Title">
+<option selected="Mr. ">Mr. </option>
+<option value="Mrs. ">Mrs. </option>
+<option value="Miss. ">Miss. </option>
+<option value="Ms. ">Ms. </option>
+</select> <span>Name: </span> <input class="text-input medium-input datepicker" type="text" name="ContactPerson" />
+</p>
+
+<p>
+<label>Email</label>
+<span>Yes: </span><input id="emaill" type="radio" name="Email-01" /> <span>No: </span><input id="emaill" type="radio" name="Email-01" />
+</p>
+
+<p>
+<label>Telephone</label><input class="text-input medium-input" type="text" name="Telephone-01" /> <input class="text-input medium-input" type="text" name="Telephone-02" /> <input class="text-input medium-input" type="text" name="Telephone-03" />
+</p>
+
+<p>
+<label>Fax</label><input class="text-input medium-input" type="text" name="Fax-01" /> <input class="text-input medium-input" type="text" name="Fax-02" />
+</p>
+
+<p>
+<label>Cell Phone</label><input class="text-input medium-input" type="text" name="CellPhone-01" /> <input class="text-input medium-input" type="text" name="CellPhone-02" /> <input class="text-input medium-input" type="text" name="CellPhone-03" />
+</p>
+
+<p>
+<label>Address</label><input class="text-input large-input" type="text" name="Address" /> <span>P.C.:</span> <input class="text-input small-input" type="text" name="PostalCode" />
+</p>
+
+<p>
+<label>Email</label><input class="text-input medium-input" type="text" name="Email-01" /> <span>Mailing List:</span> <input type="checkbox" name="MailingList" />
+</p>
+
+<hr />
+
+<p>
+<label>Domain Name</label>
+<input class="text-input large-input" type="text" name="DomainName" />
+</p>
+
+<hr />
+
+<p>
+<label>Host Category</label><select class="select medium-input" type="text" name="HostCategory">
+<option selected="Static">Static</option>
+<option value="Dynamic PHP">Dynamic PHP</option>
+<option value="Dynamic .NET">Dynamic .NET</option>
+<option value="Dynamic JAVA">Dynamic JAVA</option>
+</select>
+</p>
+
+<hr />
+
+<p>
+<label>FTP</label><span>Host:</span> <input class="text-input medium-input" type="text" name="FTP-Host" /> <span>User Name:</span> <input class="text-input medium-input" type="text" name="FTP-UN" /> <span>Password:</span> <input class="text-input medium-input" type="text" name="FTP-PW" />
+</p>
+
+<hr />
+
+<p>
+<label>Control Panel</label><span>Host:</span> <input class="text-input medium-input" type="text" name="CP-Host" /> <span>User Name:</span> <input class="text-input medium-input" type="text" name="CP-UN" /> <span>Password:</span> <input class="text-input medium-input" type="text" name="CP-PW" />
+</p>
+
+<hr />
+
+<p>
+<label>Domain Email 01</label><span>Title:</span> <select class="select small-input" name="TitleEmail-01">
+<option selected="Mr. ">Mr. </option>
+<option value="Mrs. ">Mrs. </option>
+<option value="Miss. ">Miss. </option>
+<option value="Ms. ">Ms. </option>
+</select> <span>Name: </span> <input class="text-input medium-input datepicker" type="text" name="NameEmail-01" /><br /><span>Email:</span> <input class="text-input medium-input" type="text" name="DomainEmail-01" /> <span>Password:</span> <input class="text-input medium-input" type="text" name="PW-DomainEmail-01" /> <span>Mailing List:</span> <input type="checkbox" checked name="MailingList" />
+</p>
+
+<hr />
+
+<p>
+<label>Domain Date</label>
+<input class="text-input medium-input" type="text" name="DomainDate" />
+</p>
+
+<hr />
+
+<p>
+<label>Notes</label>
+<textarea class="text-input textarea" type="text" name="Notes"></textarea>
+</p>
+
+<hr />
+
+<p>
+<input class="button" type="submit" value="Save" /> <input class="button" type="reset" value="Reset" />
+</p>
+
+</fieldset>
+
+</form>
+
+</div>
+</div>
+</div>
+
+<!-- Body End -->
+
+</div>
+
+
+<div class="clear"></div>
+
+
+<!-- Footer -->
+
+<div id="footer">
+<p>&reg; Ubicall.com &copy;  All Rights Reserved</p>
+</div>
+
+</body>
+
+</html>
