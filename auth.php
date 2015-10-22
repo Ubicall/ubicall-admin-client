@@ -4,27 +4,28 @@ function auth($username,$password)
 {
   $ch = curl_init();
 
-  curl_setopt($ch, CURLOPT_URL,"https://designer.ubicall.com/auth/token");
+  curl_setopt($ch, CURLOPT_URL,"https://api.ubicall.com/auth/token");
   curl_setopt($ch, CURLOPT_POST, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS,
-	      "client_id=node-red-editor&grant_type=password&scope=*&username=".$username."&password=".$password);
+  curl_setopt($ch, CURLOPT_POSTFIELDS,"client_id=ubicall-admin&grant_type=password&username=".$username."&password=".$password);
 //"client_id=node-red-editor&grant_type=password&scope=*&username=test&password=123456");
 
   // receive server response ...
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   $server_output = curl_exec ($ch);
-
+print curl_error($ch);
   curl_close ($ch);
   $server_output_arr=json_decode($server_output, true);
-  $storage=str_replace('\\','',$server_output);
+
+  $storage=$server_output;
+ 
   $_SESSION['storage']=$storage;
+
   echo "<script>
 
     localStorage.setItem('auth-tokens', '".$storage."');
 	</script>";
   return $server_output_arr;
-
 }
 
 function logout_auth($acess)
@@ -51,5 +52,4 @@ function logout_auth($acess)
   return $server_output;
 
 }
-
 ?>

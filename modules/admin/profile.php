@@ -40,20 +40,6 @@ if(isset($_POST["update"])){
         $admin->edit_admin($id,$fullname,$username,$password);
 
 
-    ///////////////////////////////
-
-$m = new MongoClient("mongodb://10.208.201.195:27017");
-$db = $m->selectDB('ubi_ivr_designer');
-$collection = new MongoCollection($db, 'users');
-//$pass=hash('sha256', $_POST["NewPassword"]);
-///
-$salt = '$2a$08$'.substr(strtr(base64_encode(uniqid(22,true)), '+', '.'), 0, 22);
-$pass = crypt($_POST["NewPassword"], $salt);
-////
- $collection->update(array("username"=>"$username"), array('$set'=>array("username"=>"$username","password"=>"$pass")));
- //////////////////////////
-
-
         echo"<script>alert('Updated');</script>";
     }
     else

@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_SESSION['admin_user']))
 {
     echo "<script language=\"javascript\">location.href='index.php'</script>";
@@ -24,11 +25,11 @@ if (isset($_POST['submit']))
     {
          $_SESSION['admin_name']=$admin[0]['full_name'];
         $_SESSION['admin_user']=$admin[0]['id'];
+       
 	$auth_array=auth( $username , $_POST['password'] );
-	//echo $auth_array['access_token']; echo "   To";  exit;
 	// auth session
-	$_SESSION['access_token'] = $auth_array['access_token'];
-	$_SESSION['access_expires_in'] = $auth_array['expires_in'];
+	 $_SESSION['access_token'] = $auth_array['access_token'];
+	//$_SESSION['access_expires_in'] = $auth_array['expires_in'];
 	setcookie("access_token", $auth_array['access_token'] , time()+3600 , '/' ,'ubicall.com');
 	//echo $_SESSION['access_token']; 
 	echo "<script language=\"javascript\">location.href='index.php'</script>";
